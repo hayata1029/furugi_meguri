@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: app_user_role
+  password: aaaa
+  pool: 5
+
+development:
+  <<: *default
+  database: furugi_meguri_development
+
+
+test:
+  <<: *default
+  database: furugi_meguri_test
