@@ -4,18 +4,6 @@
     <h1>自分に合う古着を見つけよう</h1>
   </div>
   <h1>古着めぐり</h1>
-  <%= link_to "ログインはこちらから", "#" %>
+  <%= link_to "ログインはこちらから", new_user_session_path %>
   <div>まずは気になるお店を探してみよう</div>
-  <dl>
-    <%= search_form_for @q do |f| %>
-      <dt><%= f.text_field :title_cont, placeholder: '例) 下北沢、高円寺など...'%></dt>
-      <dt><%= f.submit ("検索") , class: 'search-btn'%></dt>    
-    <% end %>
-  </dl>
-  <dl>
-    <%= search_form_for @q do |f| %>
-      <dt><%= f.text_field :title_cont, placeholder: '例) カジュアル、モードなど...'%></dt>
-      <dt><%= f.submit ("検索") , class: 'search-btn'%></dt>    
-    <% end %>
-  </dl>
 </div>
