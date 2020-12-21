@@ -1,0 +1,7 @@
+<h1>検索結果</h1>
+<%= render 'search_form' %>
+<div>
+  <% @stores.each do |store| %>
+    <p><%= @store.name %></p>
+  <% end %>
+</div>

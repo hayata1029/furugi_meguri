@@ -11,19 +11,8 @@
   </head>
   
   <body>
-    <dl>
-      <%= search_form_for user_session_path, @q do |f| %>
-        <dt><%= f.text_field :title_cont, placeholder: '例) 下北沢、高円寺など...'%></dt>
-        <dt><%= f.submit ("検索") , class: 'search-btn'%></dt>    
-      <% end %>
-    </dl>
-    <dl>
-      <%= search_form_for user_session_path, @q do |f| %>
-        <dt><%= f.text_field :title_cont, placeholder: '例) カジュアル、モードなど...'%></dt>
-        <dt><%= f.submit ("検索") , class: 'search-btn'%></dt>    
-      <% end %>
-    </dl>
     <%= render 'layouts/nabvar' %>
+    
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>    

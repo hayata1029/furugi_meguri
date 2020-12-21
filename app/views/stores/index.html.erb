@@ -1,0 +1,31 @@
+<body id="index">
+  <div class="home-main">
+    <div class="home-wrapper">
+      <div class="top-message-box">
+        <h2>自分に合う古着を見つけよう</h2>
+        <h1 class="title">ふるぎめぐり</h1>
+      </div>
+    </div>
+  </div>
+  <div class="box1">
+    <div>まずは気になるお店を探してみよう</div>
+      <h3 class="search-form">店舗の検索</h3>
+      <%= render 'search_form' %>
+    <div>
+      <% @stores.each do |store| %>
+        <p><%= store.name %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="search-box">
+    <div class="box2">
+      <h3 class="search-form">エリアから探す</h3>
+      
+    </div>
+    <div class="box3">
+      <h3 class="search-form">ジャンルから探す</h3>
+    </div>
+  </div>
+</body>
+
+    
