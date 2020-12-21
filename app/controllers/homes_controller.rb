@@ -1,6 +1,6 @@
 class HomesController < ApplicationController
   def index
-    # @search = Store.ransack(params[:q])
-    # @search_shops = @search.result(distinct: true).order(created_at: "DESC").includes(:shops)
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true)
   end
 end

@@ -1,6 +1,0 @@
-body{ 
-  background-image: url("1134726_m.jpg");
-}
-@import '~bootstrap/scss/bootstrap';
-
-@import "layouts/navbar";
