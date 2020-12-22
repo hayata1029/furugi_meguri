@@ -3,6 +3,7 @@
 
 #index { 
   background-image: url("1134726_m.jpg");
+  background-repeat: no-repeat;
 }
 
 .search-form {
@@ -51,13 +52,14 @@
 
 .box1 {
   padding: 0.5em 1em;
-  margin: 0 auto;
+  margin: 10em auto;
   font-weight: bold;
   color: black;
   background: #FFF;
   border: solid 3px black;
   border-radius: 10px;
   width: 600px;
+  text-align: center;
 }
 
 .box1 h2 h3 p {
@@ -65,32 +67,54 @@
   padding: 0;
 }
 
-.search-box {
-
-}
-
 .box2 {
-  padding: 0.5em 1em;
-  margin: 0 auto;
+  padding: 2em 1em;
+  margin: 4em auto;
   font-weight: bold;
   color: black;
   background: #FFF;
   border: solid 3px black;
   border-radius: 10px;
-  width: 600px;
+  width: 900px;
 }
 
 .box3 {
-  padding: 0.5em 1em;
-  margin: 0 auto;
+  padding: 2em 1em;
+  margin: 4em auto;
   font-weight: bold;
   color: black;
   background: #FFF;
   border: solid 3px black;
   border-radius: 10px;
-  width: 600px;
+  width: 900px;
 }
 
 body {
   margin: 0;
+}
+
+#footer {
+  display: block;
+  width: 100%;
+  padding: 38px 0;
+  border-top: 8px solid #47bac1;
+  position: relative;
+  bottom: 0;
+}
+
+.copyRight ul li a {
+  display: block;
+  line-height: 53px;
+  font-size: 14px;
+}
+
+.box-link {
+  padding: 0.5em 1em;
+  margin: 5em auto;
+  font-weight: bold;
+  color: black;
+  background: #FFF;
+  border: solid 3px black;
+  border-radius: 10px;
+  width: 20px;
 }

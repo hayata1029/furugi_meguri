@@ -1,12 +1,14 @@
 <body id="index">
-  <div class="home-main">
-    <div class="home-wrapper">
-      <div class="top-message-box">
-        <h2>自分に合う古着を見つけよう</h2>
-        <h1 class="title">ふるぎめぐり</h1>
+  <header>
+    <div class="home-main">
+      <div class="home-wrapper">
+        <div class="top-message-box">
+          <h2>自分に合う古着を見つけよう</h2>
+          <h1 class="title">ふるぎめぐり</h1>
+        </div>
       </div>
     </div>
-  </div>
+  </header>
   <div class="box1">
     <div>まずは気になるお店を探してみよう</div>
       <h3 class="search-form">店舗の検索</h3>
@@ -20,12 +22,35 @@
   <div class="search-box">
     <div class="box2">
       <h3 class="search-form">エリアから探す</h3>
-      
+      <h3>東京都内</h3>
+      <%= link_to "下北沢", "#", class: "box-link" %>
+      <%= link_to "高円寺", "#", class: "box-link" %>
+      <%= link_to "原宿", "#", class: "box-link" %>
+      <%= link_to "渋谷", "#", class: "box-link" %>
+      <%= link_to "中目黒", "#", class: "box-link" %>
     </div>
     <div class="box3">
       <h3 class="search-form">ジャンルから探す</h3>
+      <%= link_to "カジュアル", "#", class: "box-link" %>
+      <%= link_to "モード", "#", class: "box-link" %>
+      <%= link_to "ヴィンテージ", "#", class: "box-link" %>
+      <%= link_to "ストリート", "#", class: "box-link" %>
     </div>
   </div>
+  <footer>
+    <div id="footer" class="copyRight clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 col-xs-12">
+            <p>&copy; <%= Time.current.year %> Copyright ふるぎめぐり .</p>
+          </div>
+          <div>
+           <%= link_to "About", "#" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
     

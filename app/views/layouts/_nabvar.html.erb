@@ -10,7 +10,12 @@
           <div><%= link_to "ログイン", new_user_session_path, class: "link-form" %></div>
         </li>
         <li>
-          <%= link_to "", "#", class: "nav-link commonNavIcon profile-icon" %>
+          <%= link_to "お気に入り", "#", class: "link-form" %>
+        </li>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to "マイページ", "#", class: "link-form" %>
+          <% end %>
         </li>
       </ul>
     </div>
