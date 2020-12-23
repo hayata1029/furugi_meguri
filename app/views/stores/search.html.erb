@@ -2,6 +2,9 @@
 <%= render 'search_form' %>
 <div>
   <% @stores.each do |store| %>
-    <p><%= store.name %></p>
+    <p>住所：<%= store.address %></p>
+    <p>郵便番号：<%= store.postal_code %></p>
+    <p>店舗名：<%= store.name %></p>
+    <p>店舗について：<%= store.outline %></p>
   <% end %>
 </div>
