@@ -11,12 +11,8 @@
   </header>
   <div class="box1">
     <div>まずは気になるお店を探してみよう</div>
-      <h3 class="search-form">店舗の検索</h3>
       <%= render 'search_form' %>
     <div>
-      <% @stores.each do |store| %>
-        <p><%= store.name %></p>
-      <% end %>
     </div>
   </div>
   <div class="search-box">

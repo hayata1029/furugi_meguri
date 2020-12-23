@@ -1,12 +1,12 @@
 class StoresController < ApplicationController
   def index
-    @q = Store.ransack(params[:q])
-    @stores = @q.result(distinct: true)
+    @search = Store.ransack(params[:q])
+    @stores = @search.result(distinct: true)
   end
 
   def search
-    @q = Store.search(search_params)
-    @stores = @q.result(distinct: true)
+    @search = Store.search(search_params)
+    @stores = @search.result(distinct: true)
   end
 
   private
