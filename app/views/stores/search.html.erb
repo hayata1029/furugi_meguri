@@ -1,11 +1,15 @@
 <h1>検索結果</h1>
 <%= render 'search_form' %>
-<div  class="store-page">
-  <% @stores.each do |store| %>
-    <div class="store-details">
-      <h3 class="store-name">店舗名：<%= link_to store.name, '#' %></h3>
-      <p>住所：<%= store.address %></p>
-    </div>
-    <div>店舗について：<%= store.outline %></div>
-  <% end %>
-</div>
+<% if @stores.present? %>
+  <div  class="store-page">
+    <% @stores.each do |store| %>
+      <div class="store-details">
+        <div class="store-name">店舗名：<%= link_to store.name, '#' %></div>
+        <p>住所：<%= store.address %></p>
+      </div>
+      <div class="store-outline">店舗について：<%= store.outline %></div>
+    <% end %>
+  </div>
+<% else %>
+  <div class="search-failure">検索結果に一致する店舗はありません..</div>
+<% end %>

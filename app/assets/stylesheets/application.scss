@@ -94,10 +94,6 @@
   width: 900px;
 }
 
-body {
-  margin: 0;
-}
-
 #footer {
   display: block;
   width: 100%;
@@ -130,12 +126,23 @@ body {
 }
 
 .store-details {
+  // margin: 10px;
+  padding: 15px;
   display: flex;
   border-top: 1px solid black;
-  // border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .store-name {
   width: 600px;
   margin-right: 50px;
+}
+
+.store-outline {
+  width: 535px;
+  margin-left: auto;
+}
+
+.search-failure {
+  text-align: center;
 }

@@ -3,6 +3,7 @@ Area.create(name: '下北沢')
 Area.create(name: '高円寺')
 Area.create(name: '原宿')
 Area.create(name: '渋谷')
+Area.create(name: '中目黒')
 
 CSV.foreach('db/store_name.csv', headers: true) do |row|
   Store.create(
