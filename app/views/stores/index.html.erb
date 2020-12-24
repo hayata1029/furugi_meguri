@@ -19,11 +19,9 @@
     <div class="box2">
       <h3 class="search-form">エリアから探す</h3>
       <h3>東京都内</h3>
-      <%= link_to "下北沢", "#", class: "box-link" %>
-      <%= link_to "高円寺", "#", class: "box-link" %>
-      <%= link_to "原宿", "#", class: "box-link" %>
-      <%= link_to "渋谷", "#", class: "box-link" %>
-      <%= link_to "中目黒", "#", class: "box-link" %>
+      <% @areas.each do |area| %>
+        <%= link_to area.name, "#", class: "box-link" %>
+      <% end %>
     </div>
     <div class="box3">
       <h3 class="search-form">ジャンルから探す</h3>
