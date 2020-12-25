@@ -16,6 +16,8 @@ gem 'uglifier'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'ransack'
+gem 'carrierwave'
+gem 'mini_magick'
 
 
 group :development, :test do
