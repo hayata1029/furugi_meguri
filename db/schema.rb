@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_25_070450) do
+ActiveRecord::Schema.define(version: 2020_12_25_071535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2020_12_25_070450) do
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "store_id"
+    t.index ["store_id"], name: "index_store_images_on_store_id"
   end
 
   create_table "stores", force: :cascade do |t|
@@ -51,5 +53,6 @@ ActiveRecord::Schema.define(version: 2020_12_25_070450) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "store_images", "stores"
   add_foreign_key "stores", "areas"
 end
