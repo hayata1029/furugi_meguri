@@ -1,3 +1,3 @@
 class Store < ApplicationRecord
   belongs_to :area
-end
+  has_many :store_image
