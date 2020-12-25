@@ -1,3 +1,4 @@
 class StoreImage < ApplicationRecord
-  belong_to :store
+  mount_uploader :image, ImageUploader
+  belongs_to :store
 end
