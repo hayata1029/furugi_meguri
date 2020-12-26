@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FurugiMeguri</title>
+    <title><%= full_title(yield(:title))%></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,10 +11,10 @@
   </head>
   
   <body>
-    <%= render 'layouts/nabvar' %>
-    
+    <%= render 'layouts/nabvar' %> 
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>    
   </body>
+  <%= render 'layouts/footer' %>
 </html>

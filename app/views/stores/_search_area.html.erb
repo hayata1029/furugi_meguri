@@ -1,0 +1,7 @@
+<div class="box2">
+  <h3 class="search-area">エリアから探す</h3>
+  <h3 class="tokyo">東京都内</h3>
+  <% @areas.each do |area| %>
+    <%= link_to area.name, "#", class: "box-link" %>
+  <% end %>
+</div>

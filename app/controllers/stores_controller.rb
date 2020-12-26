@@ -8,6 +8,11 @@ class StoresController < ApplicationController
   def search
     @search = Store.search(search_params)
     @stores = @search.result(distinct: true).page(params[:page]).per(5)
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private
