@@ -55,6 +55,11 @@
   font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
 }
 
+.search-result {
+  text-align: center;
+  padding: 15px;
+}
+
 .box1 {
   padding: 0.5em 1em;
   margin: 5em auto;
@@ -126,7 +131,6 @@
 }
 
 .store-details {
-  // margin: 10px;
   padding: 15px;
   display: flex;
   border-top: 1px solid black;
@@ -141,8 +145,18 @@
 .store-outline {
   width: 535px;
   margin-left: auto;
+  display: inline-block;
+  position: absolute;
 }
 
 .search-failure {
   text-align: center;
+}
+
+.store-image {
+  // position: relative;
+  // padding-bottom: 10px;
+  padding: 10px;
+  padding-right: 145px;
+  display: inline-block;
 }
