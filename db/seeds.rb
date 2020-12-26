@@ -34,5 +34,6 @@ store_images = StoreImage.create([
   {store_id: 16, image: open("#{Rails.root}/app/assets/images/store_images/markus-winkler-1lmPFQ7ZXeM-unsplash.jpg")},
   {store_id: 17, image: open("#{Rails.root}/app/assets/images/store_images/nick-de-partee-5DLBoEX99Cs-unsplash.jpg")},
   {store_id: 18, image: open("#{Rails.root}/app/assets/images/store_images/ozgu-ozden-wa-3DeeEx6Q-unsplash.jpg")},
-  {store_id: 19, image: open("#{Rails.root}/app/assets/images/store_images/priscilla-du-preez-my5cwTzhmNI-unsplash.jpg")}
+  {store_id: 19, image: open("#{Rails.root}/app/assets/images/store_images/priscilla-du-preez-my5cwTzhmNI-unsplash.jpg")},
+  {store_id: 20, image: open("#{Rails.root}/app/assets/images/store_images/2247164_s.jpg")}
 ])
