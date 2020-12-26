@@ -18,6 +18,8 @@ gem 'jquery-rails'
 gem 'ransack'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 
 group :development, :test do

@@ -1,5 +1,6 @@
 <h1 class="search-result">検索結果</h1>
 <%= render 'search_form' %>
+<%= paginate @stores %>
 <% if @stores.present? %>
   <div  class="store-page">
     <% @stores.each do |store| %>
