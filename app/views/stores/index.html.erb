@@ -17,14 +17,14 @@
   </div>
   <div class="search-box">
     <div class="box2">
-      <h3 class="search-form">エリアから探す</h3>
-      <h3>東京都内</h3>
+      <h3 class="search-area">エリアから探す</h3>
+      <h3 class="tokyo">東京都内</h3>
       <% @areas.each do |area| %>
         <%= link_to area.name, "#", class: "box-link" %>
       <% end %>
     </div>
     <div class="box3">
-      <h3 class="search-form">ジャンルから探す</h3>
+      <h3 class="search-genre">ジャンルから探す</h3>
       <%= link_to "カジュアル", "#", class: "box-link" %>
       <%= link_to "モード", "#", class: "box-link" %>
       <%= link_to "ヴィンテージ", "#", class: "box-link" %>
@@ -39,7 +39,7 @@
             <p>&copy; <%= Time.current.year %> Copyright ふるぎめぐり .</p>
           </div>
           <div>
-           <%= link_to "About", "#" %>
+            <%= link_to "About", "#" %>
           </div>
         </div>
       </div>

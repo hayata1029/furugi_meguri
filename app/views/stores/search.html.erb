@@ -4,7 +4,7 @@
   <div  class="store-page">
     <% @stores.each do |store| %>
       <div class="store-details">
-        <span class="store-name">店舗名：<%= link_to store.name, '#' %></span>
+        <span class="store-name"><%= link_to store.name, '#' %></span>
         <span class="store-address">住所：<%= store.address %></span>
       </div>
       <% store.store_images.each do |store_image| %>
