@@ -1,6 +1,6 @@
 <h1>検索結果</h1>
 <%= render 'search_form' %>
-  <% if @stores.present? %>
+<% if @stores.present? %>
   <div  class="store-page">
     <% @stores.each do |store| %>
       <div class="store-details">
@@ -12,7 +12,8 @@
         <%= image_tag(store_image.image.to_s) %>
       <% end %>
     <% end %>
-  <% else %>
-    <div>検索ワードに一致する店舗はありませんでした..</div>
-  <% end %>
   </div>
+<% else %>
+  <div>検索ワードに一致する店舗はありませんでした..</div>
+<% end %>
+  
