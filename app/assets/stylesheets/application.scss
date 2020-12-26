@@ -126,8 +126,9 @@
 }
 
 .store-page {
-  width: 1200px;
-  margin: 50px 50px;
+  width: 1000px;
+  margin: 50px auto;
+
 }
 
 .store-details {
@@ -140,10 +141,17 @@
 .store-name {
   width: 600px;
   margin-right: 50px;
+  display: inline-block;
+}
+
+.store-address {
+  width: 600px;
+  margin-left: auto;
+  display: inline-block;
 }
 
 .store-outline {
-  width: 535px;
+  width: 600px;
   margin-left: auto;
   display: inline-block;
   position: absolute;
