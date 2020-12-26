@@ -1,6 +1,6 @@
 <h1>検索結果</h1>
 <%= render 'search_form' %>
-<% if @stores.present? %>
+  <% if @stores.present? %>
   <div  class="store-page">
     <% @stores.each do |store| %>
       <div class="store-details">
@@ -8,8 +8,11 @@
         <p>住所：<%= store.address %></p>
       </div>
       <div class="store-outline">店舗について：<%= store.outline %></div>
+      <% store.store_images.each do |store_image| %>
+        <%= image_tag(store_image.image.to_s) %>
+      <% end %>
     <% end %>
+  <% else %>
+    <div>検索ワードに一致する店舗はありませんでした..</div>
+  <% end %>
   </div>
-<% else %>
-  <div class="search-failure">検索結果に一致する店舗はありません..</div>
-<% end %>
