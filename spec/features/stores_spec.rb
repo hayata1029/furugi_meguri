@@ -9,13 +9,17 @@ RSpec.describe 'Stores', type: :feature do
   end
 
   context "店舗名や住所で検索してキーワードがヒットした場合" do
-    before do
+    it "あああの店舗名は含まれていること" do
       fill_in '例) 店舗名か住所を入力してください', with: 'あああ'
       click_on '検索'
-    end
-
-    it "あああの店舗名は含まれていること" do
       expect(page).to have_content store.name
+    end
+  end
+
+  context "ふるぎめぐりのリンクを押した場合" do
+    it 'トップページへ遷移すること' do
+      click_link 'ふるぎめぐり'
+      expect(current_path).to eq root_path
     end
   end
 
