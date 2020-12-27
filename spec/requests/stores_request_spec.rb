@@ -29,7 +29,7 @@ RSpec.describe "Stores", type: :request do
 
   describe "検索結果画面のテスト" do
     let!(:area) { create(:area, id: 1, name: '下北沢')}
-    let!(:store) { create(:store, name: 'あああ', area_id: 1, outline: 'a' * 50, address: '東京都世田谷区北沢２丁目３６−２') }
+    let!(:store) { create(:store, name: 'あああ', area_id: 1, outline: 'a' * 50, address: 'a' * 15) }
 
     before do
       get search_path
