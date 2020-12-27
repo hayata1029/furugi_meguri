@@ -20,6 +20,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
+gem 'rails-i18n'
 
 
 group :development, :test do
@@ -29,6 +30,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'rubocop-airbnb'
+  gem 'rails-controller-testing'
 end
 
 group :development do
