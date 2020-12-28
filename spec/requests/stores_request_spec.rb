@@ -28,7 +28,7 @@ RSpec.describe "Stores", type: :request do
   end
 
   describe "検索結果画面のテスト" do
-    let!(:area) { create(:area, id: 1, name: '下北沢')}
+    let!(:area) { create(:area, id: 1, name: '下北沢') }
     let!(:store) { create(:store, name: 'あああ', area_id: 1, outline: 'a' * 50, address: 'a' * 15) }
 
     before do
