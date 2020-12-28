@@ -1,0 +1,21 @@
+<%= provide(:title, '検索結果') %>
+<h1 class="search-result">検索結果</h1>
+<%= render 'search_form' %>
+<%= render 'paginate', stores: @stores %>
+<% if @stores.present? %>
+  <div  class="store-page">
+    <% @stores.each do |store| %>
+      <div class="store-details">
+        <span class="store-name"><%= link_to store.name, '#' %></span>
+        <span class="store-address">住所：<%= store.address %></span>
+      </div>
+      <% store.store_images.each do |store_image| %>
+        <span><%= image_tag(store_image.image.to_s, class: 'store-image') %></span>
+      <% end %>
+      <span class="store-outline">店舗について：<%= store.outline.truncate(60) %></span>
+    <% end %>
+  </div>
+<% else %>
+  <div class="search-failure">検索ワードに一致する店舗はありませんでした..</div>
+<% end %>
+  

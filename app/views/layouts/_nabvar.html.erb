@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <h2><%= link_to "ふるぎめぐり", root_path, class: "navbar__brand navbar__mainLogo top-link" %></h2>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-md-auto align-items-center">
+        <li>
+          <div><%= link_to "ログイン", new_user_session_path, class: "link-form" %></div>
+        </li>
+        <li>
+          <%= link_to "お気に入り", "#", class: "link-form" %>
+        </li>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to "マイページ", "#", class: "link-form" %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
