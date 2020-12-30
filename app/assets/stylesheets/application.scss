@@ -17,6 +17,7 @@
   margin: 0 auto;
   margin-bottom: 10px;
   text-align: center;
+  padding-top: 10px;
 }
 
 .search-field {
@@ -178,8 +179,8 @@
 .store-details {
   padding: 15px;
   display: flex;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .store-name {
@@ -202,6 +203,7 @@
   margin-left: auto;
   display: inline-block;
   position: absolute;
+  padding-top: 7px;
 }
 
 .search-failure {
@@ -229,10 +231,15 @@
   padding-bottom: 5px;
 }
 
+.store-box {
+  a {
+    color: black;
+  }
+}
+
 .store-image-details {
   padding: 10px;
   padding-right: 145px;
-  // text-align: center;
   size: 300px;
 }
 
@@ -242,6 +249,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 240px 0;
+  padding-top: 10px;
 }
 
 .store-body {
@@ -272,7 +280,8 @@
 .store-details-name {
   width: 930px;
   height: 80px;
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .store-details-address {
@@ -282,4 +291,7 @@
 
 .store-details-outline {
   width: 750px;
+  p {
+    font-size: 25px;
+  }
 }
