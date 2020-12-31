@@ -1,6 +1,7 @@
 @import 'bootstrap';
 @import 'layouts/nabvar';
 
+/*=== トップ画面 ===*/
 #index { 
   background-image: url("/images/1134726_m.jpg");
   background-repeat: no-repeat;
@@ -16,18 +17,7 @@
   margin: 0 auto;
   margin-bottom: 10px;
   text-align: center;
-}
-
-.search-area {
-  margin: 0 auto;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-}
-
-.search-genre {
-  margin: 0 auto;
-  margin-bottom: 10px;
-  padding-bottom: 30px;
+  padding-top: 10px;
 }
 
 .search-field {
@@ -80,15 +70,27 @@
 }
 
 .box1 {
-  padding: 0.5em 1em;
-  margin: 5em auto;
-  font-weight: bold;
-  color: black;
-  background: #FFF;
-  border: solid 3px black;
-  border-radius: 10px;
   width: 600px;
   text-align: center;
+  background: #fff;
+  padding: 2em 1em;
+  margin: 4em auto;
+  position: relative;
+  border: solid 3px brown;
+  border-radius: 8px;
+  .catchphrase {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #fff;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+  }
 }
 
 .box1 h2 h3 p {
@@ -99,27 +101,45 @@
 .box2 {
   padding: 2em 1em;
   margin: 4em auto;
-  font-weight: bold;
-  color: black;
-  background: #FFF;
-  border: solid 3px black;
-  border-radius: 10px;
   width: 900px;
-  position: relative;
   bottom: -200px;
+  position: relative;
+  border: solid 3px brown;
+  border-radius: 8px;
+  .search-area {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: black;
+    font-weight: bold;
+  }
 }
 
 .box3 {
   padding: 2em 1em;
   margin: 4em auto;
-  font-weight: bold;
-  color: black;
-  background: #FFF;
-  border: solid 3px black;
-  border-radius: 10px;
   width: 900px;
-  position: relative;
   bottom: -200px;
+  position: relative;
+  border: solid 3px  brown;
+  border-radius: 8px;
+  .search-genre {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: black;
+    font-weight: bold;
+  }
 }
 
 #footer {
@@ -149,6 +169,8 @@
   width: 20px;
 }
 
+/*=== 検索結果画面 ===*/
+
 .store-page {
   width: 800px;
   margin: 50px auto;
@@ -157,8 +179,8 @@
 .store-details {
   padding: 15px;
   display: flex;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .store-name {
@@ -181,6 +203,7 @@
   margin-left: auto;
   display: inline-block;
   position: absolute;
+  padding-top: 7px;
 }
 
 .search-failure {
@@ -198,7 +221,77 @@
 }
 
 .pagination {
-  // justify-content: center;
   width: 800px;
   margin: 50px auto;
+}
+
+/*=== 店舗詳細画面 ===*/
+
+.store-boxes {
+  padding-bottom: 5px;
+}
+
+.store-box {
+  a {
+    color: black;
+  }
+}
+
+.store-image-details {
+  padding: 10px;
+  padding-right: 145px;
+  size: 300px;
+}
+
+.store-deta {
+  max-width: 1600px;
+  min-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 240px 0;
+  padding-top: 10px;
+}
+
+.store-body {
+  padding: 20px 0;
+}
+
+.store-description {
+  list-style: none;
+  li {
+    float: left;
+    text-align: center;
+    width: 230px;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    a {
+      display: block;
+      text-decoration: none;
+      margin: 0; 
+      padding: 0;
+    }
+  }
+}
+
+.store-details-name {
+  width: 930px;
+  height: 80px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.store-details-address {
+  width: 600px;
+  height: 40px;
+}
+
+.store-details-outline {
+  width: 750px;
+  p {
+    font-size: 25px;
+  }
 }
