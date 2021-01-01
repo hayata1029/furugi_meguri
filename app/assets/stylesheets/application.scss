@@ -305,7 +305,7 @@
 }
 .box {
   width: 400px;
-  height: 450px;
+  height: 500px;
   margin: 60px auto 0;
   border-radius: 4px;
   border: 1px #ddd solid;
@@ -424,6 +424,7 @@ h1 {
 
 .box-newusr {
   margin-bottom: 10px;
+  margin-top: 40px;
 }
 .box-newusr p {
   text-align: center;
@@ -472,4 +473,9 @@ h1 {
   color: white;
   background-color: green;
   text-align: center;
+}
+
+#error_explanation li {
+  list-style: none;
+  color: red;
 }
