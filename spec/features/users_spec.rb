@@ -25,7 +25,7 @@ RSpec.describe 'Users', type: :feature do
     context "登録されているユーザー情報を入れた場合" do
       it "ログインに成功すること" do
         fill_in "メールアドレス", with: "testuser@example.com"
-        fill_in "パスワード",    with: "testuser"
+        fill_in "パスワード", with: "testuser"
         click_button "ログイン"
         expect(page).to have_content "ログインしました"
       end
@@ -34,7 +34,7 @@ RSpec.describe 'Users', type: :feature do
     context "登録されていないユーザー情報を入れた場合" do
       it "ログインに失敗すること" do
         fill_in "メールアドレス", with: "missuser@example.com"
-        fill_in "パスワード",    with: "missuser"
+        fill_in "パスワード", with: "missuser"
         click_button "ログイン"
         expect(page).to have_content "メールアドレス もしくはパスワードが不正です。"
       end
@@ -50,8 +50,8 @@ RSpec.describe 'Users', type: :feature do
 
     context "正しい情報を入力した場合" do
       it "アカウントの新規作成に成功すること" do
-        fill_in "メールアドレス",  with: "iamauser@example.con"
-        fill_in "パスワード",     with: "iamauser"
+        fill_in "メールアドレス", with: "iamauser@example.con"
+        fill_in "パスワード", with: "iamauser"
         fill_in "確認用パスワード", with: "iamauser"
         click_button "アカウント作成"
         expect(page).to have_content "アカウント登録が完了しました。"
@@ -60,8 +60,8 @@ RSpec.describe 'Users', type: :feature do
 
     context "既に登録されている情報を入力した場合" do
       it "アカウントの新規作成に失敗すること" do
-        fill_in "メールアドレス",  with: "testuser@example.com"
-        fill_in "パスワード",     with: "iamauser"
+        fill_in "メールアドレス", with: "testuser@example.com"
+        fill_in "パスワード", with: "iamauser"
         fill_in "確認用パスワード", with: "iamauser"
         click_button "アカウント作成"
         expect(page).to have_content "メールアドレスはすでに存在します"
@@ -70,8 +70,8 @@ RSpec.describe 'Users', type: :feature do
 
     context "パスワードを6文字以下で入力した場合" do
       it "アカウントの新規作成に失敗すること" do
-        fill_in "メールアドレス",  with: "iamauser@example.con"
-        fill_in "パスワード",     with: "test"
+        fill_in "メールアドレス", with: "iamauser@example.con"
+        fill_in "パスワード", with: "test"
         fill_in "確認用パスワード", with: "test"
         click_button "アカウント作成"
         expect(page).to have_content "パスワードは6文字以上で入力してください"
@@ -80,8 +80,8 @@ RSpec.describe 'Users', type: :feature do
 
     context "パスワードと確認用パスワードに別の値を入力した場合" do
       it "アカウントの新規作成に失敗すること" do
-        fill_in "メールアドレス",  with: "iamauser@example.con"
-        fill_in "パスワード",     with: "testuser"
+        fill_in "メールアドレス", with: "iamauser@example.con"
+        fill_in "パスワード", with: "testuser"
         fill_in "確認用パスワード", with: "iamauser"
         click_button "アカウント作成"
         expect(page).to have_content "確認用パスワードとパスワードの入力が一致しません"
@@ -90,8 +90,8 @@ RSpec.describe 'Users', type: :feature do
 
     context "何も入力しなかった場合" do
       it "アカウントの新規作成に失敗すること" do
-        fill_in "メールアドレス",  with: " "
-        fill_in "パスワード",     with: " "
+        fill_in "メールアドレス", with: " "
+        fill_in "パスワード", with: " "
         fill_in "確認用パスワード", with: " "
         click_button "アカウント作成"
         expect(page).to have_content "メールアドレスを入力してください"

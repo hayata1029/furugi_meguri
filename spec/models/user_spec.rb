@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  
   context "正しい値を入力して作成した場合" do
     let!(:user) { create(:user, email: "testuser@example.com", password: "testuser") }
+
     it "ユーザーは有効であること" do
       expect(user).to be_valid
     end
@@ -11,6 +11,7 @@ RSpec.describe User, type: :model do
 
   context "登録されているユーザー情報は" do
     let!(:user) { create(:user, email: "testuser@example.com", password: "testuser") }
+
     user_2 = FactoryBot.build(:user, email: "testuser@example.com", password: "testuser")
     it "一意のユーザーであること" do
       expect(user_2).not_to be_valid
