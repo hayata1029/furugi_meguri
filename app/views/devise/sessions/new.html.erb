@@ -3,7 +3,7 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <h1>ログイン</h1>
       <div class="box-email">
-        <%= f.label :email, "Eメール" %><br />
+        <%= f.label :email, "メールアドレス" %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
       <div class="box-password">
@@ -28,12 +28,12 @@
         </div>
       </div>
     <% end %>
-    <div class="box-newusr">
-      <%= link_to "新規アカウント登録", new_user_registration_path %>
-    </div>
     <div class="guest-guide">アカウント登録せずに使用する場合下記のリンクをクリック</div>
     <div class="guest-login">
       <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %>
+    </div>
+    <div class="box-newusr">
+      <%= link_to "新規アカウント登録の場合はこちら", new_user_registration_path %>
     </div>
   </div>
 </div>
