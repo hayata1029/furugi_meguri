@@ -20,6 +20,7 @@ class ApplicationController < ActionController::Base
         request.path != "/stores/show"   &&
         request.path != "/users/sign_in" &&
         request.path != "/users/sign_up" &&
+        request.path != "/users/password/new" &&
         !request.xhr?)
       session[:previous_url] = request.fullpath 
     end

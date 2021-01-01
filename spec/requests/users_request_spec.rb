@@ -46,4 +46,24 @@ RSpec.describe "Users", type: :request do
       expect(response.body).to include "アカウント作成"
     end
   end
+
+  context "パスワード再発行画面のテスト" do
+    before do
+      get new_user_password_path
+    end
+
+    it "正しくHTTPステータスを返すこと" do
+      expect(response).to have_http_status(:success)
+    end
+
+    it "正しいviewを返すこと" do
+      expect(response).to render_template :new
+    end
+
+    it "画面に必要な要素が表示されていること" do
+      expect(response.body).to include "パスワードを忘れた場合"
+      expect(response.body).to include "メールアドレス"
+      expect(response.body).to include "パスワード再発行"
+    end
+  end
 end
