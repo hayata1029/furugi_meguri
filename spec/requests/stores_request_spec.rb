@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Stores", type: :request do
-  describe "トップページのテスト" do
+  context "トップページのテスト" do
     before do
       get root_path
     end
@@ -27,7 +27,7 @@ RSpec.describe "Stores", type: :request do
     end
   end
 
-  describe "検索結果画面のテスト" do
+  context "検索結果画面のテスト" do
     let!(:area) { create(:area, id: 1, name: '下北沢') }
     let!(:store) { create(:store, name: 'あああ', area_id: 1, outline: 'a' * 50, address: 'a' * 15) }
 
