@@ -1,0 +1,10 @@
+<%= form_with model: [@store, @wom], local: true do |f| %>
+  <div class="wom-field">
+    <div class="wom-title">クチコミ投稿</div>
+    <%= f.hidden_field :store_id, value: @store.id %>
+    <%= f.text_field :title, placeholder: "タイトルを入力してください", class: "wom-title" %>
+    <%= f.text_area :content, placeholder: "クチコミを入力してください", class: "wom-content" %>
+    <%= f.date_field :visit_date, class: "wom-date" %>
+    <%= f.submit "投稿する", class: "wom-submit" %>
+  </div>
+<% end %>
