@@ -27,5 +27,26 @@ class WomsController < ApplicationController
   end
 
   def destroy
+    @wom.destroy
+    redirect_to store_woms_path
+  end
+
+  private
+
+  def wom_params
+    params.require(:wom).permit(:store_id, :title, :content, :visit_date)
+  end
+
+  def set_store
+    @store = Store.find_by(params[:id])
+  end
+
+  def set_area
+    @area  = Area.find(@store.area_id)
+  end
+
+  def correct_wom
+    @wom = Wom.find(params[:id])
+    redirect_to root_url if @wom.nil?
   end
 end
