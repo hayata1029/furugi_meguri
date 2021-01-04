@@ -174,6 +174,7 @@
 .store-page {
   width: 800px;
   margin: 50px auto;
+  margin-bottom: -150px;
 }
 
 .store-details {
@@ -478,4 +479,70 @@ h1 {
 #error_explanation li {
   list-style: none;
   color: red;
+}
+
+/*=== クチコミ投稿画面 ===*/
+
+.field {
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+}
+
+.wom-link {
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+}
+
+.wom-field {
+  text-align: center;
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: -100px;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.wom-title {
+  width: 600px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wom-content {
+  width: 600px;
+  height: 220px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wom-date {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
+.wom-title {
+  padding-top: 10px;
+}
+
+.wom-area {
+  width: 800px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.wom-delete {
+  text-align: right;
 }
