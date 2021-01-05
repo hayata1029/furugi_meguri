@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get 'index',  to: 'areas#index'
   get 'search', to: 'stores#search'
   resources :stores do
-    resources :woms, only: [:create, :destroy, :index, :new]
+    resources :woms, only: [:create, :destroy, :update, :edit, :index, :new]
   end
 end

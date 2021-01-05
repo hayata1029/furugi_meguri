@@ -23,11 +23,16 @@
   <% end %>
 </div>
 
-<% @store.woms.each do |w| %>
-  <div class="wom-area">
-    <h1 class="wom-title"><%= w.title %></h1>
-    <div class="wom-title"><%= w.content %></div>
-    <div class="wom-title"><%= w.visit_date %></div>
-    <div class="wom-delete"><%= link_to "削除", store_wom_path(@store, @wom), method: :delete %></div>
-  </div>
+<% if @store.present? %>
+  <% @store.woms.each do |w| %>
+    <div class="wom-area">
+      <h1 class="wom-title"><%= w.title %></h1>
+      <div class="wom-title"><%= w.content %></div>
+      <div class="wom-title"><%= w.visit_date %></div>
+      <span class="wom-delete"><%= link_to "削除", store_wom_path(@store, @wom), method: :delete %></span>
+      <span class="wom-update"><%= link_to "編集", edit_store_wom_path(@store, @wom) %></span>
+    </div>
+  <% end %>
+<% else %>
+  <h1 class="not-wom-message">まだクチコミはありません</h1>
 <% end %>

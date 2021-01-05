@@ -2,6 +2,7 @@ class WomsController < ApplicationController
   before_action :set_store,   only: [:index, :new, :create]
   before_action :set_area,    only: [:index, :new, :create]
   before_action :correct_wom, only: [:destroy]
+
   def index
     @wom = Wom.find_by(params[:id])
   end
@@ -21,9 +22,14 @@ class WomsController < ApplicationController
   end
 
   def edit
+    @store = Store.find(params[:store_id])
+    @wom = Wom.find(params[:id])
   end
 
   def update
+    @wom = Wom.find(params[:id])
+    @wom.update(params.require(:wom).permit(:store_id, :title, :content))
+    redirect_to store_woms_path
   end
 
   def destroy
@@ -38,7 +44,7 @@ class WomsController < ApplicationController
   end
 
   def set_store
-    @store = Store.find_by(params[:id])
+    @store = Store.find(params[:store_id])
   end
 
   def set_area
