@@ -1,9 +1,9 @@
 <%= form_with model: [@store, @wom], local: true do |f| %>
   <div class="wom-field">
-    <div class="wom-title">クチコミ編集</div>
+    <div class="wom-post">クチコミ編集</div>
     <%= f.hidden_field :store_id, value: @store.id %>
-    <%= f.text_area :title, placeholder: "タイトルを入力してください", class: "wom-title" %>
-    <%= f.text_area :content, placeholder: "クチコミを入力してください", class: "wom-content" %>
+    <span><%= f.text_area :title, placeholder: "タイトルを入力してください", class: "wom-title" %></span>
+    <p><%= f.text_area :content, placeholder: "クチコミを入力してください", class: "wom-content" %></p>
     <p><%= f.submit "更新する" %></p>
   </div>
 <% end %>
