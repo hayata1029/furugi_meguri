@@ -508,11 +508,17 @@ h1 {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
 
+.wom-post {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .wom-title {
   width: 600px;
   height: 50px;
   margin: 0 0 0 0;
-  padding: 0;
+  padding: 10px;
 }
 
 .wom-content {
@@ -528,10 +534,6 @@ h1 {
   width: 300px;
 }
 
-.wom-title {
-  padding-top: 10px;
-}
-
 .wom-area {
   width: 800px;
   height: 150px;
@@ -545,17 +547,20 @@ h1 {
 
 .wom-delete {
   float: right;
+  padding-top: 10px;
+  padding-right: 20px;
+  color: black;
 }
 
 .wom-update {
   float: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  color: black;
 }
 
 .not-wom-message {
   margin-top: 30px;
   text-align: center;
-  // border-top: solid 5px ;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.22);
-  // width: 600px;
-  height: 450px;
+  height: 250px;
 }
