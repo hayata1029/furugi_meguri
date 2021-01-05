@@ -511,7 +511,7 @@ h1 {
 .wom-title {
   width: 600px;
   height: 50px;
-  margin: 0 auto;
+  margin: 0 0 0 0;
   padding: 0;
 }
 
@@ -544,5 +544,18 @@ h1 {
 }
 
 .wom-delete {
-  text-align: right;
+  float: right;
+}
+
+.wom-update {
+  float: right;
+}
+
+.not-wom-message {
+  margin-top: 30px;
+  text-align: center;
+  // border-top: solid 5px ;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.22);
+  // width: 600px;
+  height: 450px;
 }
