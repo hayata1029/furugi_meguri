@@ -23,7 +23,7 @@
   <% end %>
 </div>
 
-<% if @store.present? %>
+<% if @store.woms.present? %>
   <% @store.woms.each do |w| %>
     <div class="wom-area">
       <h1 class="wom-title"><%= w.title %></h1>
