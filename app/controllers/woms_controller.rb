@@ -1,6 +1,6 @@
 class WomsController < ApplicationController
-  before_action :set_store,   only: [:index, :new, :create]
-  before_action :set_area,    only: [:index, :new, :create]
+  before_action :set_store,   only: [:index, :new, :create, :update]
+  before_action :set_area,    only: [:index, :new, :create, :update]
   before_action :correct_wom, only: [:destroy]
 
   def index
@@ -15,7 +15,14 @@ class WomsController < ApplicationController
     @wom = current_user.woms.build(wom_params)
     if @wom.save
       render 'woms/index'
-    else
+    elsif @wom.title.length >= 50 && @wom.content.length >= 140
+      flash.now[:alert] = "タイトルは50字,クチコミは140字以内で入力してください"
+      render 'woms/new'
+    elsif @wom.content.length >= 140
+      flash.now[:alert] = "クチコミは140字以内で入力してください"
+      render 'woms/new'
+    elsif @wom.title.length >= 50
+      flash.now[:alert] = "タイトルは50字以内で入力してください"
       render 'woms/new'
     end
     @wom.user_id = current_user.id
@@ -28,8 +35,19 @@ class WomsController < ApplicationController
 
   def update
     @wom = Wom.find(params[:id])
-    @wom.update(params.require(:wom).permit(:store_id, :title, :content))
-    redirect_to store_woms_path
+    if @wom.update(update_params)
+      redirect_to store_woms_path
+    elsif @wom.title.length >= 50 && @wom.content.length >= 140
+      flash.now[:alert] = "タイトルは50字,クチコミは140字以内で入力してください"
+      render 'woms/edit'
+    elsif @wom.content.length >= 140
+      flash.now[:alert] = "クチコミは140字以内で入力してください"
+      render 'woms/edit'
+    elsif @wom.title.length >= 50
+      flash.now[:alert] = "タイトルは50字以内で入力してください"
+      render 'woms/edit'
+    end
+    
   end
 
   def destroy
@@ -54,5 +72,9 @@ class WomsController < ApplicationController
   def correct_wom
     @wom = Wom.find(params[:id])
     redirect_to root_url if @wom.nil?
+  end
+
+  def update_params
+    params.require(:wom).permit(:store_id, :title, :content)
   end
 end
