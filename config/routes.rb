@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   end
   get 'index',  to: 'areas#index'
   get 'search', to: 'stores#search'
-  resources :stores, only: [:search, :show]
+  resources :stores do
+    resources :woms, only: [:create, :destroy, :update, :edit, :index, :new]
+  end
 end

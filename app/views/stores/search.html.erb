@@ -1,8 +1,8 @@
 <%= provide(:title, '検索') %>
 <%= render 'search_form' %>
-<%= render 'paginate', stores: @stores %>
 <% if @stores.present? %>
   <div class="store-page">
+    <%= render 'paginate', stores: @stores %>
     <% @stores.each do |store| %>
       <div class="store-details">
         <span class="store-name"><%= link_to store.name, store_path(store.id) %></span>
@@ -15,8 +15,8 @@
       <% end %>
       <span class="store-outline">店舗について：<%= store.outline.truncate(60) %></span>
     <% end %>
+    <%= render 'paginate', stores: @stores %>
   </div>
 <% else %>
   <div class="search-failure">検索ワードに一致する店舗はありませんでした..</div>
 <% end %>
-<%= render 'paginate', stores: @stores %>

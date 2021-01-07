@@ -5,7 +5,7 @@
 #index { 
   background-image: url("/images/IMG-3040.jpg");
   background-repeat: no-repeat;
-  background-size: 1435px 700px;
+  background-size: 1440px 700px;
 }
 
 .top-message {
@@ -70,11 +70,13 @@
 }
 
 .box1 {
-  width: 600px;
+  width: 1000px;
+  height: 130px;
   text-align: center;
   background: #fff;
   padding: 2em 1em;
-  margin: 4em auto;
+  margin: 0 auto;
+  margin-top: 500px;
   position: relative;
   border: solid 3px brown;
   border-radius: 8px;
@@ -93,59 +95,10 @@
   }
 }
 
-.box1 h2 h3 p {
-  margin: 0; 
-  padding: 0;
-}
-
-.box2 {
-  padding: 2em 1em;
-  margin: 4em auto;
-  width: 900px;
-  bottom: -200px;
-  position: relative;
-  border: solid 3px brown;
-  border-radius: 8px;
-  .search-area {
-    position: absolute;
-    display: inline-block;
-    top: -13px;
-    left: 10px;
-    padding: 0 9px;
-    line-height: 1;
-    font-size: 19px;
-    background: #FFF;
-    color: black;
-    font-weight: bold;
-  }
-}
-
-.box3 {
-  padding: 2em 1em;
-  margin: 4em auto;
-  width: 900px;
-  bottom: -200px;
-  position: relative;
-  border: solid 3px  brown;
-  border-radius: 8px;
-  .search-genre {
-    position: absolute;
-    display: inline-block;
-    top: -13px;
-    left: 10px;
-    padding: 0 9px;
-    line-height: 1;
-    font-size: 19px;
-    background: #FFF;
-    color: black;
-    font-weight: bold;
-  }
-}
-
 #footer {
   background-color: beige;
-  display: block;
   width: 100%;
+  margin: 0 auto;
   padding: 38px 0;
   border-top: 8px solid #47bac1;
   position: relative;
@@ -174,6 +127,7 @@
 .store-page {
   width: 800px;
   margin: 50px auto;
+  margin-bottom: -150px;
 }
 
 .store-details {
@@ -478,4 +432,88 @@ h1 {
 #error_explanation li {
   list-style: none;
   color: red;
+}
+
+/*=== クチコミ投稿画面 ===*/
+
+.field {
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+}
+
+.wom-link {
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+}
+
+.wom-field {
+  text-align: center;
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: -100px;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.wom-post {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wom-title {
+  width: 600px;
+  height: 50px;
+  margin: 0 0 0 0;
+  padding: 10px;
+}
+
+.wom-content {
+  width: 600px;
+  height: 220px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wom-date {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
+.wom-area {
+  width: 800px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.wom-delete {
+  float: right;
+  padding-top: 10px;
+  padding-right: 20px;
+  color: black;
+}
+
+.wom-update {
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  color: black;
+}
+
+.not-wom-message {
+  margin-top: 30px;
+  text-align: center;
+  height: 250px;
 }

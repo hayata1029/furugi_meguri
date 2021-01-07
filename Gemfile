@@ -30,6 +30,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rubocop-airbnb'
   gem 'rails-controller-testing'
+  gem 'faker'
 end
 
 group :development do

@@ -7,7 +7,7 @@ class StoresController < ApplicationController
 
   def search
     @search = Store.ransack(params[:q])
-    @stores = @search.result(distinct: true).page(params[:page]).per(5)
+    @stores = @search.result(distinct: true).order(:id).page(params[:page]).per(5)
   end
 
   def show

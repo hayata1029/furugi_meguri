@@ -37,3 +37,7 @@ store_images = StoreImage.create([
   {store_id: 19, image: open("#{Rails.root}/app/assets/images/store_images/priscilla-du-preez-my5cwTzhmNI-unsplash.jpg")},
   {store_id: 20, image: open("#{Rails.root}/app/assets/images/store_images/2247164_s.jpg")}
 ])
+
+# メインのサンプルユーザーを１人作成する
+User.create!(email: "example@railstutorial.com",
+             password:              "foobar")
