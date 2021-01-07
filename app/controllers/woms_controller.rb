@@ -47,7 +47,6 @@ class WomsController < ApplicationController
       flash.now[:alert] = "タイトルは50字以内で入力してください"
       render 'woms/edit'
     end
-    
   end
 
   def destroy
@@ -66,7 +65,7 @@ class WomsController < ApplicationController
   end
 
   def set_area
-    @area  = Area.find(@store.area_id)
+    @area = Area.find(@store.area_id)
   end
 
   def correct_wom
