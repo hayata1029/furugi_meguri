@@ -1,24 +1,64 @@
-# README
+# ふるぎめぐり
+都内の古着屋の情報の検索や古着屋へのクチコミを誰でも簡単に投稿できるサイトです。
+下記ページで公開中です。
+https://furugimeguri.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##アプリ概要
+都内の古着屋を店舗名や２３区名で探せたり、実際のクチコミからユーザーのリアルな評価ができるアプリとなっています。
+-都内にある古着屋を検索できる
+-気になるお店を保存で機能を実装
+Ruby on Railsで制作しました。
 
-Things you may want to cover:
+##機能一覧
+-店舗検索機能（あいまい)
+-クチコミ投稿機能
+-ログイン機能
+-ゲストログイン機能
+-ページネーション機能
+###実装予定の機能
+-買いたい商品の保存機能
+-マイページ機能
 
-* Ruby version
+##使い方
+###店舗検索
+1. トップページの検索ボックスに任意の値を入力（店舗名or店舗エリア)をしクリック
+2. 条件に該当した店舗が一覧で出てくるので該当する店舗をクリック
+###クチコミ投稿
+1. 画面右上の「ログイン」ボタンをクリック
+2. テストユーザーで簡単ログインをクリック(ゲストログインをクリック)
+3. 任意の店舗ページへ移動し「クチコミ」をクリックするとクチコミ一覧画面に遷移します
+4. 「クチコミ投稿」を押すと新規クチコミ投稿画面へ遷移します
+5. タイトルとクチコミ本文を入力して投稿するをクリックで投稿完了です
 
-* System dependencies
+#環境使用技術
+##開発環境
+-Docker/Docker-compose
+-PostgreSQL 13.1
+##フロントエンド
+-HTML/CSS
+-SCSS
+-Bootstrap
+-Javascript
+##バックエンド
+-Ruby 2.7.2
+##フレームワーク
+-Ruby on Rails 6.0.3.3
+##テストフレームワーク
+-Rspec(現在テスト数約70)
+##本番環境
+-heroku
+##その他使用技術
+-Rubocop
+-githubのissuse,プルリクを活用した擬似チーム開発
+-simple calendarを使ってカレンダー表示
 
-* Configuration
+#制作背景
+##1.東京の古着屋をまとめて検索できるサイトがない
+私は東京に行って古着を買うことが好きなのですが、古着屋を探す際にネットで調べてもまとまって古着屋を探すことができず苦労した経験がありました。
 
-* Database creation
+##2.実際に古着屋に訪れた意見を見ながら店舗を探したい
+また、古着屋に行ったリアルなユーザーの意見を直接見て探したいと思ったので検索機能とクチコミ投稿機能があるアプリケーションが欲しいと思っため作成しました。
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#ターゲット層
+-私のような古着が好きで一括で古着屋を探したいと考えている方
+-東京の古着屋をあまり知らないがぜひ行ってみたという方
