@@ -1,7 +1,8 @@
 class WomsController < ApplicationController
-  before_action :set_store,   only: [:index, :new, :create, :update]
-  before_action :set_area,    only: [:index, :new, :create, :update]
+  before_action :set_store,   only: [:index, :edit, :new, :create, :update]
+  before_action :set_area,    only: [:index, :edit, :new, :create, :update]
   before_action :correct_wom, only: [:destroy]
+  before_action :set_wom,     only: [:edit, :update, :destroy]
 
   def index
     @wom = Wom.find_by(params[:id])
@@ -30,11 +31,9 @@ class WomsController < ApplicationController
 
   def edit
     @store = Store.find(params[:store_id])
-    @wom = Wom.find(params[:id])
   end
 
   def update
-    @wom = Wom.find(params[:id])
     if @wom.update(update_params)
       redirect_to store_woms_path
     elsif @wom.title.length >= 50 && @wom.content.length >= 140
@@ -58,6 +57,10 @@ class WomsController < ApplicationController
 
   def wom_params
     params.require(:wom).permit(:store_id, :title, :content, :visit_date)
+  end
+
+  def set_wom
+    @wom = Wom.find(params[:id])
   end
 
   def set_store
