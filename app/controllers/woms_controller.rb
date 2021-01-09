@@ -1,14 +1,12 @@
 class WomsController < ApplicationController
-  before_action :set_store,   only: [:index, :edit, :new, :create, :update]
-  before_action :set_area,    only: [:index, :edit, :new, :create, :update]
-  before_action :correct_wom, only: [:destroy]
-  before_action :set_wom,     only: [:edit, :update, :destroy]
+  before_action :set_store,    only: [:index, :edit, :new, :create, :update]
+  before_action :set_area,     only: [:index, :edit, :new, :create, :update]
+  before_action :correct_wom,  only: [:destroy]
+  before_action :set_wom,      only: [:edit, :update, :destroy]
+  before_action :set_favorite
 
   def index
     @wom = Wom.find_by(params[:id])
-    if user_signed_in?
-      @favorite = Favorite.find_by(store_id: params[:store_id], user_id: current_user.id)
-    end
   end
 
   def new
@@ -81,5 +79,11 @@ class WomsController < ApplicationController
 
   def update_params
     params.require(:wom).permit(:store_id, :title, :content)
+  end
+
+  def set_favorite
+    if user_signed_in?
+      @favorite = Favorite.find_by(store_id: params[:store_id], user_id: current_user.id)
+    end
   end
 end
