@@ -19,7 +19,7 @@ RSpec.describe "Stores", type: :request do
     end
 
     it "店舗エリアで検索できるフォームが表示されていること" do
-      expect(response).to render_template(partial: 'layouts/search_area')
+      expect(response).to render_template(partial: 'layouts/_search_area')
     end
   end
 

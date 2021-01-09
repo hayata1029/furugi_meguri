@@ -3,7 +3,7 @@ class StoresController < ApplicationController
     @search = Store.ransack(params[:q])
     @stores = @search.result(distinct: true).page(params[:page]).per(5)
     @store_all = Store.all
-    @areas  = Area.all
+    @areas = Area.all
   end
 
   def search
