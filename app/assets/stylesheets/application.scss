@@ -551,7 +551,7 @@ h1 {
 
 #favorite-name {
   border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-bottom: 0.5px solid black;
   width: 800px;
   margin-top: 10px;
   padding-right: 400px;
@@ -565,7 +565,7 @@ h1 {
 }
 
 .favorite-details {
-  margin-top: 10px;
+  padding-top: 30px;
   margin-bottom: 10px;
   width: 800px;
   margin: 0 auto;
@@ -579,14 +579,37 @@ h1 {
   border: 1px solid gray;;
 }
 
+.favorite-list {
+  margin-top: 40px;
+  height: 190px;
+}
+
+.wom-box {
+  height: 90px;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  background:beige;
+  width: 570px;
+  float: right;
+  margin-top: -60px;
+  margin-right: 10px;
+}
+
+.wom-box span {
+  margin: 0; 
+  padding: 0;
+}
+
 .wom-f-title {
   font-size: 12px;
-  padding-top: 7px;
+  padding-top: -20px;
+  height: 14px;
 }
 
 .wom-f-content {
   font-size: 12px;
   padding-top: 7px;
+  
 }
 
 .store-favorite {
