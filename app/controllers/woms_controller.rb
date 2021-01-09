@@ -6,6 +6,9 @@ class WomsController < ApplicationController
 
   def index
     @wom = Wom.find_by(params[:id])
+    if user_signed_in?
+      @favorite = Favorite.find_by(store_id: params[:store_id], user_id: current_user.id)
+    end
   end
 
   def new
