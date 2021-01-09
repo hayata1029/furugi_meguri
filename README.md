@@ -42,7 +42,7 @@ Ruby on Railsで制作しました。
 ## バックエンド
 - Ruby 2.7.2
 ## フレームワーク
-- Ruby on Rails 6.0.3.3
+- Ruby on Rails 6.0.3.4
 ## テストフレームワーク
 - Rspec(現在テスト数約70)
 ## 本番環境
