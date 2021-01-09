@@ -13,15 +13,6 @@
     <div class="catchphrase">まずは気になるお店を探してみよう</div>
       <%= render 'search_form' %>
     </div>
-    <div class="box2">
-      <p class="search-area">エリアから探す</p>
-      <span class="tokyo">東京都内</span>
-      <span class="store-all">全<%= @store_all.count %>件</span><p></br></p>
-      <% @areas.each do |area| %>
-        <%= link_to(search_path(@q, 'q[area_name_cont]': area.name)) do %>
-          <span class="box-link"><%= area.name %>:<%= area.store.count %>件</span>
-        <% end %>
-      <% end %>
-    </div> 
+    <%= render 'layouts/search_area' %>
   </div>
 </body>
