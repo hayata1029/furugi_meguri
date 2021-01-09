@@ -1,8 +1,7 @@
 class FavoritesController < ApplicationController
-
   def index
     @user = User.find(params[:user_id])
-    @favorite_stores = @user.favorites.map{|favorite| favorite.store}
+    @favorite_stores = @user.favorites.map { |favorite| favorite.store }
     @store = @favorite_stores.first
   end
 

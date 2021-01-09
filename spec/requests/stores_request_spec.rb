@@ -17,6 +17,10 @@ RSpec.describe "Stores", type: :request do
     it "検索用のフォームが表示されていること" do
       expect(response).to render_template(partial: 'stores/_search_form')
     end
+
+    it "店舗エリアで検索できるフォームが表示されていること" do
+      expect(response).to render_template(partial: 'layouts/_search_area')
+    end
   end
 
   context "検索結果画面のテスト" do
