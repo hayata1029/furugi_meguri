@@ -189,9 +189,7 @@
 
 /*=== 店舗詳細画面 ===*/
 .store-about {
-  // width: 800px;
   margin: 50px auto;
-  // margin-bottom: -150px;
 }
 
 .store-boxes {
@@ -258,6 +256,7 @@
 }
 
 .store-details-outline {
+  margin-left: 30px;
   span {
     font-size: 25px;
   }
@@ -595,6 +594,6 @@ h1 {
   float: left;
 }
 
-.store-outline2 {
+.store-outlines {
   margin-top: 10px;
 }
