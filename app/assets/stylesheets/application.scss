@@ -8,6 +8,11 @@
   background-size: 1440px 700px;
 }
 
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+}
+
 .top-message {
   margin-top: 10px;
   margin-left: 20px;
@@ -101,7 +106,7 @@
   margin: 0 auto;
   padding: 38px 0;
   border-top: 8px solid #47bac1;
-  position: relative;
+  position: absolute;
   bottom: -200px;
 }
 
@@ -180,6 +185,11 @@
 }
 
 /*=== 店舗詳細画面 ===*/
+.store-about {
+  // width: 800px;
+  margin: 50px auto;
+  // margin-bottom: -150px;
+}
 
 .store-boxes {
   padding-bottom: 5px;
@@ -244,8 +254,7 @@
 }
 
 .store-details-outline {
-  width: 750px;
-  p {
+  span {
     font-size: 25px;
   }
 }
@@ -527,4 +536,61 @@ h1 {
 
 .favorite-store {
   margin: 0 auto;
+}
+
+.favorite-name {
+  font-size: 14px;
+  width: 600px;
+  margin-left: 10px;
+  margin-right: 1px;
+  display: inline-block;
+}
+
+#favorite-name {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 800px;
+  margin-top: 10px;
+  padding-right: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.favorite-outline {
+  font-size: 13px;
+  width: 100px;
+}
+
+.favorite-details {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.favorite-image {
+  width: 150px;
+  margin-left: 10px;
+  margin-right: 50px;
+  padding: 5px 5px 5px 5px;
+  border: 1px solid gray;;
+}
+
+.wom-f-title {
+  font-size: 12px;
+  padding-top: 7px;
+}
+
+.wom-f-content {
+  font-size: 12px;
+  padding-top: 7px;
+}
+
+.store-favorite {
+  margin-left: 600px;
+  float: left;
+}
+
+.store-outline2 {
+  margin-top: 10px;
 }
