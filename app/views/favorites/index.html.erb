@@ -23,13 +23,16 @@
           <span><%= image_tag i.image.to_s, class: "favorite-image" %></span>
         <% end %>
         <span class="store-outline"><%= favorite.outline.truncate(60) %></span>
-              <span>代表的なクチコミ</span>
-          <% favorite.woms.first(1).each do |wom| %>
-            <p class="wom-box">
-
-              <span class="wom-f-content">タイトル：<%= wom.title %></span></br>
-              <span class="wom-f-content"><%= wom.content.truncate(60) %></span>
-            </p>
+        <span>代表的なクチコミ</span>
+          <% if favorite.woms.present? %>
+            <% favorite.woms.first(1).each do |wom| %>
+              <p class="wom-box">
+                <span class="wom-f-content">タイトル：<%= wom.title %></span></br>
+                <span class="wom-f-content"><%= wom.content.truncate(60) %></span>
+              </p>
+            <% end %>
+          <% else %>
+            <p class="wom-box">まだクチコミはないみたいです</p>
           <% end %>
       </div>
     <% end %>
