@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   get 'search', to: 'stores#search'
   resources :stores do
     resources :woms, only: [:create, :destroy, :update, :edit, :index, :new]
+    resources :favorites, only: [:create, :destroy]
+  end
+  resources :users do
+    resources :favorites, only: [:index]
   end
 end

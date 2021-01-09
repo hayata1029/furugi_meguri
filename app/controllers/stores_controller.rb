@@ -14,5 +14,8 @@ class StoresController < ApplicationController
     @store = Store.find(params[:id])
     @area  = Area.find(@store.area_id)
     @image = @store.store_images.find(params[:id]).image
+    if user_signed_in?
+      @favorites = Favorite.find_by(store_id: params[:store_id], user_id: current_user.id)
+    end
   end
 end

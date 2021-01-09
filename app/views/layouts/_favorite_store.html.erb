@@ -1,0 +1,11 @@
+<span class="store-favorite">
+  <% if user_signed_in? %>
+    <% if @store.favorite_by?(current_user) %>
+      <span class="faborite-button"><%= link_to "お気に入り解除", store_favorite_path(@store.id, @favorite), method: :delete, class: "btn btn-success favorite" %></span>
+    <% else %>
+      <span class="faborite-button"><%= link_to "お気に入り保存", store_favorites_path(@store.id), method: :post, class: "btn btn-success favorite" %></span>
+    <% end %>
+    <% else %>
+    <span class="faborite-button"><%= link_to "お気に入り保存", new_user_session_path, class: "btn btn-success favorite" %></span>
+  <% end %>
+</span>

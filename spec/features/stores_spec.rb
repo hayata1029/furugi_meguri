@@ -23,13 +23,6 @@ RSpec.describe 'Stores', type: :feature do
         expect(current_path).to eq new_user_session_path
       end
     end
-
-    # context "店舗名のリンクを押した場合" do
-    #   it "店舗詳細ページへ遷移すること" do
-    #     click_on store.name
-    #     expect(current_path).to eq store_path(store.id)
-    #   end
-    # end
   end
 
   describe "検索画面のテスト" do

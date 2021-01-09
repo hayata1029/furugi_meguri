@@ -17,14 +17,6 @@ RSpec.describe "Stores", type: :request do
     it "検索用のフォームが表示されていること" do
       expect(response).to render_template(partial: 'stores/_search_form')
     end
-
-    it "エリアで探す検索用のフォームが表示されていること" do
-      expect(response).to render_template(partial: 'stores/_search_area')
-    end
-
-    it "ジャンルで探す検索用のフォームが表示されていること" do
-      expect(response).to render_template(partial: 'stores/_search_genre')
-    end
   end
 
   context "検索結果画面のテスト" do

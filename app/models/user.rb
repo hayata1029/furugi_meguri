@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_many :woms, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  # has_many :favorite_store, through: favorites, source: :store
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
