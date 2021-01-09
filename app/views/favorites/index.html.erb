@@ -1,0 +1,18 @@
+<div  class="favorite-list">
+  <% @favorite_stores.each do |favorite| %>
+    <div class="favorite-details">
+      <p id="favorite-name"><%= link_to favorite.name, store_path(favorite.id), class: "favorite-name" %></p>
+      <% favorite.store_images.each do |i| %>
+        <span><%= image_tag i.image.to_s, class: "favorite-image" %></span>
+      <% end %>
+      <span class="store-outline"><%= favorite.outline.truncate(60) %></span>
+        <% favorite.woms.first(1).each do |wom| %>
+          <span class="wom-post">
+            <span class="wom-f-title">クチコミ</span>
+            <span class="wom-f-title"><%= wom.title %></span>
+            <span class="wom-f-content"><%= wom.content %></span>
+          </span>
+        <% end %>
+    </div>
+  <% end %>
+</div>
