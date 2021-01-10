@@ -319,6 +319,14 @@ h1 {
   color: #111111;
 }
 
+.box-name {
+  margin-bottom: 13px;
+}
+
+.name-field {
+  width: 345px;
+}
+
 .box-email {
   margin-bottom: 13px;
 }
@@ -332,7 +340,7 @@ h1 {
   margin-bottom: 22px;
 }
 
-.box-email label, .box-password label {
+.box-name label, .box-email label, .box-password label {
   font-weight: 700;
   font-size: 13px;
   padding-left: 2px;
