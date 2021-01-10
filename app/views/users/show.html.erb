@@ -3,7 +3,7 @@
     <%= @user.username %>さんのマイページ
   </div>
   <ul class="mypage-list">
-    <li class="list-box"><%= link_to "設定", edit_user_path(@user.id) %></li>
+    <li class="list-box"><%= link_to "設定", edit_user_registration_path %></li>
     <li class="list-box"><%= link_to "保存したお店", user_favorites_path(@user.id) %></li>
     <li class="list-box"><%= link_to "欲しい古着", "#" %></li>
   </ul>
