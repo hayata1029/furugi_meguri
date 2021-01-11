@@ -3,7 +3,6 @@
     <h1 class="store-details-name"><%= @store.name %></h1>
     <%= render 'layouts/favorite_store' %>
     </div>
-    <div class="store-details-address">住所：<%= @store.address %></div>
     <div class="store-boxes">
       <ul class="store-description">
         <li class="store-box"><%= link_to '店舗情報', store_path(@store.id) %></li>
