@@ -1,0 +1,13 @@
+<%= provide(:title, '購入予定の古着一覧') %>
+<%= render 'layouts/link_nabvar' %>
+<%= link_to "欲しい古着アイテムを保存する", new_store_item_path %>
+
+<% if @store.items.present? %>
+  <% @store.items.each do |item| %>
+    <%= item.name %>
+    <%= item.price %>
+    <%= image_tag(item.image.to_s) %>
+  <% end %>
+<% else %>
+  なんもねえ
+<% end %>
