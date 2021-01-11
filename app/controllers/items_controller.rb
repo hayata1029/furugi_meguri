@@ -1,6 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_store,    only: [:show, :edit, :new, :create, :update]
-  before_action :set_area,     only: [:show, :edit, :new, :create, :update]
+  before_action :set_store,    only: [:list, :edit, :new, :create, :update]
   before_action :set_wom,      only: [:edit, :update, :destroy]
   before_action :set_item,     only: [:edit, :update, :destroy]
   before_action :set_favorite
@@ -10,7 +9,7 @@ class ItemsController < ApplicationController
     @user = User.find(current_user.id)
   end
 
-  def show
+  def list
     @item = Item.find_by(params[:item_id])
   end
 
@@ -55,10 +54,6 @@ class ItemsController < ApplicationController
 
   def set_store
     @store = Store.find(params[:store_id])
-  end
-
-  def set_area
-    @area = Area.find(@store.area_id)
   end
 
   def correct_wom
