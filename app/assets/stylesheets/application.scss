@@ -131,6 +131,9 @@
   border-top: 8px solid #47bac1;
   position: absolute;
   bottom: -200px;
+  p {
+    text-align: center;
+  }
 }
 
 .copyRight ul li a {
@@ -319,8 +322,20 @@ h1 {
   color: #111111;
 }
 
+.box-name {
+  margin-bottom: 13px;
+}
+
+.name-field {
+  width: 345px;
+}
+
 .box-email {
   margin-bottom: 13px;
+}
+
+.email-field {
+  width: 345px;
 }
 
 .box-forgotemail {
@@ -332,7 +347,11 @@ h1 {
   margin-bottom: 22px;
 }
 
-.box-email label, .box-password label {
+.password-field {
+  width: 345px;
+}
+
+.box-name label, .box-email label, .box-password label {
   font-weight: 700;
   font-size: 13px;
   padding-left: 2px;
@@ -634,10 +653,189 @@ h1 {
 }
 
 .store-favorite {
-  margin-left: 600px;
+  margin-left: 200px;
   float: left;
 }
 
 .store-outlines {
   margin-top: 10px;
+}
+
+/*=== マイページ機能 ===*/
+
+.mypages-box {
+  padding: 0.2em;
+  margin: 2em 0;
+  background: #d6ebff;
+  box-shadow: 0px 0px 0px 10px #d6ebff;
+  border: dashed 2px white;
+  height: 250px;
+  width: 900px;
+}
+
+.mypages-box:before {
+  border-top: 1px solid black;
+}
+
+.mypage-box {
+  padding: 0.2em;
+  margin: 2em 0;
+  background: white;
+  height: 215px;
+  width: 240px;
+  margin-left: 640px;
+  text-align: right;
+  margin-top: -245px;
+}
+
+.mypage-box div {
+  margin: 0;
+  padding: 0;
+}
+
+.mypage {
+  width: 900px;
+  margin: 0 auto;
+  padding-bottom: -260px;
+}
+
+.mypage-name {
+  font-size: 25px;
+  margin-top: 100px;
+  border-bottom: 1px solid black;
+  padding-bottom: 100px;
+}
+
+.mypage-list {
+  margin-left: 400px;
+  margin-top: 50px;
+  margin-bottom: -220px;
+}
+
+.list-box {
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+  width: 150px;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #232323;
+  background: #fff8e8;
+  border-right: solid 1px #ffc06e;
+  border-left: solid 1px #ffc06e;
+  a {
+    margin: 0; 
+    padding: 0;
+  }
+}
+
+.mypage-element {
+  text-align: left;
+  padding: 20px;
+  border-bottom: dashed 1px;
+}
+
+.mypage-woms {
+  margin-left: 119px;
+  padding-top: 20px;
+}
+
+.mypage-parts {
+  margin-left: 70px;
+  padding-top: 20px;
+}
+
+.mypage-wear {
+  margin-left: 119px;
+  padding-top: 20px;
+}
+
+.edit-title {
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 280px;
+}
+
+.edit-page {
+  height: 700px;
+  width: 950px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  padding: 0.2em;
+  background: #d6ebff;
+  box-shadow: 0px 0px 0px 10px #d6ebff;
+  border: dashed 2px white;
+  h2 {
+    text-align: left;
+  }
+}
+
+.account-edit { 
+  width: 500px;
+  text-align: left;
+  margin-top: -40px;
+  margin-bottom: 10px;
+  margin-left: 550px;
+}
+
+.edit-introduction {
+  margin-bottom: 40px;
+  height: 110px;
+  width: 345px;
+}
+
+.edit-name {
+  margin-bottom: 13px;
+  width: 345px;
+}
+
+.edit-email {
+  margin-bottom: 13px;
+  width: 345px;
+}
+
+.edit-password {
+  margin-bottom: 22px;
+  width: 345px;
+}
+
+.edit-box {
+  padding: 0.2em;
+  margin: 2em 0;
+  background: white;
+  height: 150px;
+  margin-left: 640px;
+  text-align: right;
+ }
+
+.edit-button {
+  font-weight: lighter;
+  width: 100px;
+  color: black;
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  background: beige;
+}
+
+.edit-button:active {
+  border-bottom: solid 2px #00BCD4;
+  box-shadow: none;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.3), 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.introduction-box {
+  padding: 0.2em;
+  margin: 2em 0;
+  background: white;
+  height: 215px;
+  width: 520px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.introduction-box div {
+  margin: 0;
+  padding: 0px
 }

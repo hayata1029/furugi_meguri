@@ -21,7 +21,6 @@ RSpec.describe "Woms", type: :request do
 
     it "画面に必要な要素が表示されていること" do
       expect(response.body).to include store.name
-      expect(response.body).to include "住所：" + store.address
       expect(response.body).to include "店舗情報"
       expect(response.body).to include "クチコミ"
       expect(response.body).to include "クチコミを投稿する"
@@ -43,7 +42,6 @@ RSpec.describe "Woms", type: :request do
 
     it "画面に必要な要素が表示されていること" do
       expect(response.body).to include store.name
-      expect(response.body).to include "住所：" + store.address
       expect(response.body).to include "店舗情報"
       expect(response.body).to include "クチコミ"
       expect(response.body).to include "投稿する"
@@ -65,7 +63,6 @@ RSpec.describe "Woms", type: :request do
 
     it "画面に必要な要素が表示されていること" do
       expect(response.body).to include store.name
-      expect(response.body).to include "住所：" + store.address
       expect(response.body).to include "店舗情報"
       expect(response.body).to include "クチコミ"
       expect(response.body).to include "更新する"

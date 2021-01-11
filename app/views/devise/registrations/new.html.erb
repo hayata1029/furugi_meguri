@@ -2,6 +2,11 @@
   <div class="box-inner">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <h1>新規アカウント作成</h1>
+
+      <div class="box-name">
+        <%= f.label "アカウントの名前" %></br>
+        <%= f.text_field :username, autofocus: true, class: "name-field" %>
+      </div>
       
       <div class="box-email">
         <%= f.label :email %>
