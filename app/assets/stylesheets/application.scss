@@ -131,6 +131,9 @@
   border-top: 8px solid #47bac1;
   position: absolute;
   bottom: -200px;
+  p {
+    text-align: center;
+  }
 }
 
 .copyRight ul li a {
@@ -650,7 +653,7 @@ h1 {
 }
 
 .store-favorite {
-  margin-left: 600px;
+  margin-left: 200px;
   float: left;
 }
 
