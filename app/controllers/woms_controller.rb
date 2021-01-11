@@ -31,7 +31,6 @@ class WomsController < ApplicationController
   end
 
   def edit
-    @store = Store.find(params[:store_id])
   end
 
   def update
