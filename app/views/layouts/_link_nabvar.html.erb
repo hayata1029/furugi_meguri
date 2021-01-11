@@ -7,7 +7,11 @@
       <ul class="store-description">
         <li class="store-box"><%= link_to '店舗情報', store_path(@store.id) %></li>
         <li class="store-box"><%= link_to 'クチコミ', store_woms_path(@store.id) %></li>
-        <li class="store-box"><%= link_to '購入予定の古着', '#' %></li>
+        <% if user_signed_in? %>
+          <li class="store-box"><%= link_to '購入予定の古着', store_item_path(@store, @item) %></li>
+        <% else %>
+          <li class="store-box"><%= link_to '購入予定の古着', new_user_session_path %></li>
+        <% end %>
         <% if user_signed_in? %>
           <li class="store-box"><%= link_to 'お気に入り', user_favorites_path(current_user.id) %></li>
         <% else %>
