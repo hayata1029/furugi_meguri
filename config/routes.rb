@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :stores do
     resources :woms, only: [:create, :destroy, :update, :edit, :index, :new]
     resources :favorites, only: [:create, :destroy]
+    resources :items, only: [:index, :create, :destroy, :new, :update, :edit]
   end
   resources :users do
     resources :favorites, only: [:index]
