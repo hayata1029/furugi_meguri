@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   resources :users do
     resources :favorites, only: [:index]
   end
-  resources :users, :only => [:show, :edit]
+  resources :users, only: [:show]
 end
