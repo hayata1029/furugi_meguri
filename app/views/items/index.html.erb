@@ -1,2 +1,14 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<div class="mypage">
+  <ul class="mypage-list">
+    <li class="list-box"><%= link_to "設定", edit_user_registration_path %></li>
+    <li class="list-box"><%= link_to "保存したお店", user_favorites_path(@user.id) %></li>
+    <li class="list-box"><%= link_to "購入予定の古着", user_items_path(@user.id) %></li>
+  </ul>
+  <div class="mypage-name">
+    <%= @user.username %>さんのマイページ
+  </div>
+  <% @user.items.each do |item| %>
+    <%= item.name %>
+    <%= item.price %>
+  <% end %>
+</div>
