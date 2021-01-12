@@ -1,34 +1,36 @@
-<%= render 'layouts/link_nabvar' %></br>
-<div class="save-box">
-  <%= form_with model: [@store, @item], local: true do |f| %>
-    <%= f.hidden_field :store_id, value: @store.id %>
-    <div>
-      <%= f.file_field :image, style: 'display:none;', id: "item-image" %>
-      <% if @item.image.present? %>
-        <%= image_tag  @item.image.to_s, onClick: "$('#item-image').click()", id: "img_prev" %>
-      <% else %>
-        <%= image_tag '/apple-touch-icon-precomposed.jpg', onClick: "$('#item-image').click()", id: "img_prev" %>
-      <% end %></br>
-    <span><%= f.text_field :name, placeholder: "アイテム名", class: "item-name" %></span>
-    <span><%= f.number_field :price, placeholder: "値段", class: "item-price" %>円</span>
-    <span><%= f.submit "保存", class: "btn btn-info save-button" %></span>
-  <% end %>
-</div>
+<div>
+  <%= render 'layouts/link_nabvar' %></br>
+  <div class="save-box">
+    <%= form_with model: [@store, @item], local: true do |f| %>
+      <%= f.hidden_field :store_id, value: @store.id %>
+      <div>
+        <%= f.file_field :image, style: 'display:none;', id: "item-image" %>
+        <% if @item.image.present? %>
+          <%= image_tag  @item.image.to_s, onClick: "$('#item-image').click()", id: "img_prev" %>
+        <% else %>
+          <%= image_tag '/apple-touch-icon-precomposed.jpg', onClick: "$('#item-image').click()", id: "img_prev" %>
+        <% end %></br>
+      <span><%= f.text_field :name, placeholder: "アイテム名", class: "item-name" %></span>
+      <span><%= f.number_field :price, placeholder: "値段", class: "item-price" %>円</span>
+      <span><%= f.submit "保存", class: "btn btn-info save-button" %></span>
+    <% end %>
+  </div>
 
-<script type="text/javascript">
-  $(function() {
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-          $('#img_prev').attr('src', e.target.result);
+  <script type="text/javascript">
+    $(function() {
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            $('#img_prev').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
         }
-        reader.readAsDataURL(input.files[0]);
       }
-    }
 
-    $('#item-image').change(function() {
-      readURL(this);
+      $('#item-image').change(function() {
+        readURL(this);
+      });
     });
-  });
-</script>
+  </script>
+</div>
