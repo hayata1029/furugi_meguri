@@ -7,8 +7,12 @@
   <div class="mypage-name">
     <%= @user.username %>さんのマイページ
   </div>
-  <% @user.items.each do |item| %>
-    <%= item.name %>
-    <%= item.price %>
-  <% end %>
+    <% @user.items.each do |item| %>
+      <div class="item-box">
+        <%= image_tag item.image.to_s %>
+        <p><%= item.name %></p>
+        <p><%= item.price %>円</p>
+        <p><%= link_to item.store.name, store_path(item.store_id) %></p>
+      </div>
+    <% end %>
 </div>
