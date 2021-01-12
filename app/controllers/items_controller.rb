@@ -1,7 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :set_store,    only: [:list, :edit, :new, :create, :update]
-  before_action :set_wom,      only: [:edit, :update, :destroy]
-  before_action :set_item,     only: [:edit, :update, :destroy]
+  before_action :set_store,     only: [:list, :edit, :new, :create, :update]
+  before_action :set_item,      only: [:edit, :destroy]
   before_action :set_favorite
 
   def index
@@ -11,6 +10,7 @@ class ItemsController < ApplicationController
 
   def list
     @item = Item.find_by(params[:item_id])
+    @items = Item.all.order(id: "DESC")
   end
 
   def new
@@ -28,14 +28,21 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @store = Store.find(params[:store_id])
   end
 
   def update
+    item = Item.find(params[:id])
+    if  item.update(items_params)
+      redirect_to store_list_path(@store.id)
+    else
+      root_path
+    end
   end
 
-  def destory
+  def destroy
     @item.destroy
-    redirect_to store_items_path(@store.id)
+    redirect_back(fallback_location: root_path)
   end
 
   private
@@ -45,28 +52,11 @@ class ItemsController < ApplicationController
   end
 
   def set_item
-    @item = Item.(params[:id])
-  end
-
-  def set_wom
-    @wom = Wom.find(params[:id])
+    @item = Item.find(params[:id])
   end
 
   def set_store
     @store = Store.find(params[:store_id])
-  end
-
-  def correct_wom
-    @wom = Wom.find(params[:id])
-    redirect_to root_url if @wom.nil?
-  end
-
-  def update_params
-    params.require(:wom).permit(:name, :price, :image)
-  end
-
-  def set_user
-    @user = User.find(current_user.id)
   end
 
   def set_favorite
