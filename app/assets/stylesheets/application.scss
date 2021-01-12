@@ -841,7 +841,7 @@ h1 {
 }
 
 
-/*=== お気に入り店舗保存機能 ===*/
+/*=== 購入予定の古着の保存機能 ===*/
 
 .save-box {
   text-align: center;
@@ -874,6 +874,39 @@ h1 {
 }
 
 #img_prev {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
+  border: solid 1px black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.item-index {
+  text-align: center;
+  margin: 0 auto;
+  width: 960px;
+}
+
+.item-save {
+  width: 960px;
+  p {
+    margin-top: 1px;
+    margin-bottom: 35px;
+    text-align: center;
+    a {
+      color: white;
+    }
+  }
+}
+
+
+.item-box {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: bold;
+  background-color: beige;
+  width: 240px;
+  display: inline-block;
 }
