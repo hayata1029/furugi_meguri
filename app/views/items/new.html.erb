@@ -8,10 +8,10 @@
         <%= image_tag  @item.image.to_s, onClick: "$('#item-image').click()", id: "img_prev" %>
       <% else %>
         <%= image_tag '/apple-touch-icon-precomposed.jpg', onClick: "$('#item-image').click()", id: "img_prev" %>
-      <% end %>
-    <div><%= f.text_field :name, placeholder: "アイテム名を入力してください", class: "item-name" %></div>
-    <div>価格<%= f.text_field :price, class: "item-price" %>円</div>
-    <div><%= f.submit "保存" %></div>
+      <% end %></br>
+    <span><%= f.text_field :name, placeholder: "アイテム名", class: "item-name" %></span>
+    <span><%= f.number_field :price, placeholder: "値段", class: "item-price" %>円</span>
+    <span><%= f.submit "保存", class: "btn btn-info save-button" %></span>
   <% end %>
 </div>
 
