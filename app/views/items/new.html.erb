@@ -3,21 +3,32 @@
   <%= form_with model: [@store, @item], local: true do |f| %>
     <%= f.hidden_field :store_id, value: @store.id %>
     <div>
-      <%= f.file_field :image, class: "item-image" %>
+      <%= f.file_field :image, style: 'display:none;', id: "item-image" %>
       <% if @item.image.present? %>
-        <%= image_tag(@item.image.to_s, onClick: "$('.item-image').click()", class: "img_prev") %>
+        <%= image_tag  @item.image.to_s, onClick: "$('#item-image').click()", id: "img_prev" %>
       <% else %>
-        <%= image_tag "public/images/600px-No_image_available.svg.png", class: "img_prev" %>
+        <%= image_tag '/apple-touch-icon-precomposed.jpg', onClick: "$('#item-image').click()", id: "img_prev" %>
       <% end %>
-    </div>
-    <div>
-      <%= f.text_field :name, placeholder: "アイテム名を入力してください", class: "item-name" %>
-    </div>
-    <div>
-      価格<%= f.text_field :price, class: "item-price" %>円
-    </div>
-    <div>
-      <%= f.submit "保存" %>
-    </div>
+    <div><%= f.text_field :name, placeholder: "アイテム名を入力してください", class: "item-name" %></div>
+    <div>価格<%= f.text_field :price, class: "item-price" %>円</div>
+    <div><%= f.submit "保存" %></div>
   <% end %>
 </div>
+
+<script type="text/javascript">
+  $(function() {
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $('#img_prev').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $('#item-image').change(function() {
+      readURL(this);
+    });
+  });
+</script>

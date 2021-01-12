@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
   def create
     @item = current_user.items.build(items_params)
     if @item.save
-      redirect_to store_items_path(@store.id)
+      redirect_to store_list_path(@store.id)
     else
       redirect_to new_store_item_path(@user.id)
     end
