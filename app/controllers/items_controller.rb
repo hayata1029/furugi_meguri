@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
 
   def update
     item = Item.find(params[:id])
-    if  item.update(items_params)
+    if item.update(items_params)
       redirect_to store_list_path(@store.id)
     else
       root_path

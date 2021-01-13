@@ -4,7 +4,7 @@ RSpec.describe Item, type: :model do
   let!(:area) { create(:area, id: 1, name: "下北沢") }
   let!(:store) { create(:store, id: 1, name: "古着屋", area_id: 1, address: "東京都世田谷区北沢123-4") }
   let!(:user) { create(:user, id: 1, email: "testuser@exaple.com", password: "testuser", introduction: "a" * 20) }
-  let!(:item) { create(:item, name: "Tシャツ", image: Rack::Test::UploadedFile.new(File.join(Rails.root, 'public/270303_m.jpg')), price: 120, store_id: 1, user_id: 1)}
+  let!(:item) { create(:item, name: "Tシャツ", image: Rack::Test::UploadedFile.new(File.join(Rails.root, 'public/270303_m.jpg')), price: 120, store_id: 1, user_id: 1) }
 
   context "正しい値を入力して保存した場合" do
     it "保存したアイテムは有効であること" do

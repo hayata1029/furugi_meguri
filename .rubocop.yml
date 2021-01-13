@@ -17,4 +17,4 @@ AllCops:
     - 'node_modules/**/*'
 
 Metrics/LineLength:
-  Max: 130
+  Max: 170

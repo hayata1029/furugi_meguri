@@ -15,7 +15,7 @@ RSpec.describe "Users", type: :request do
     it "画面に必要な要素が表示されていること" do
       expect(response.body).to include "設定"
       expect(response.body).to include "保存したお店"
-      expect(response.body).to include "欲しい古着"
+      expect(response.body).to include "購入予定アイテム"
       expect(response.body).to include user.introduction
     end
   end
@@ -31,7 +31,7 @@ RSpec.describe "Users", type: :request do
     it "正しくHTTPステータスを返すこと" do
       expect(response).to have_http_status(:success)
     end
-    
+
     it "画面に必要な要素が表示されていること" do
       expect(response.body).to include "アカウントの設定"
       expect(response.body).to include "アカウントの名前"
