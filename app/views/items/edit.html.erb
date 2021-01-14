@@ -4,8 +4,8 @@
   <%= form_with model: [@store, @item], local: true do |f| %>
     <%= f.hidden_field :store_id, value: @store.id %>
     <div>
-      <%= f.file_field :image, style: 'display:none;', id: "item-image" %>
-        <%= image_tag  @item.image.to_s, onClick: "$('#item-image').click()", id: "img_prev" %></br>
+      <%= f.file_field :item_image, style: 'display:none;', id: "item-image" %>
+        <%= image_tag  @item.item_image.to_s, onClick: "$('#item-image').click()", id: "img_prev" %></br>
     <span><%= f.text_field :name, placeholder: "アイテム名", class: "item-name" %></span>
     <span><%= f.number_field :price, placeholder: "値段", class: "item-price" %>円</span>
     <span><%= f.submit "保存", class: "btn btn-info save-button" %></span>
