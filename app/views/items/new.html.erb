@@ -5,9 +5,9 @@
     <%= form_with model: [@store, @item], local: true do |f| %>
       <%= f.hidden_field :store_id, value: @store.id %>
       <div>
-        <%= f.file_field :image, style: 'display:none;', id: "item-image" %>
+        <%= f.file_field :item_image, style: 'display:none;', id: "item-image" %>
         <% if @item.image.present? %>
-          <%= image_tag  @item.image.to_s, onClick: "$('#item-image').click()", id: "img_prev" %>
+          <%= image_tag  @item.item_image.to_s, onClick: "$('#item-image').click()", id: "img_prev" %>
         <% else %>
           <%= image_tag '/apple-touch-icon-precomposed.jpg', onClick: "$('#item-image').click()", id: "img_prev" %>
         <% end %></br>
