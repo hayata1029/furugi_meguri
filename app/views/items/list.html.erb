@@ -4,8 +4,8 @@
   <div class="item-save">
     <p class="btn btn-success"><%= link_to "欲しい古着アイテムを保存する", new_store_item_path %></p>
   </div>
-  <% if @items.present? %>
-    <% @items.each do |item| %>
+  <% if @store.items.present? %>
+    <% @store.items.each do |item| %>
       <div class="item-box">
       <div class="function-button">
         <%= link_to "削除", store_item_path(@store, item), method: :delete %>
