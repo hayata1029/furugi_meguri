@@ -10,10 +10,10 @@
 <% if @store.woms.present? %>
   <% @store.woms.each do |w| %>
     <div class="wom-area">
-      <span><%= link_to "削除", store_wom_path(@store, @wom), method: :delete, class: "wom-delete" %></span>
-      <span><%= link_to "編集", edit_store_wom_path(@store, @wom), class: "wom-update" %></span>
-      <h1 class="wom-title"><%= w.title %></h1>
-      <div class="wom-title"><%= w.content %></div>
+      <span><%= link_to "削除", store_wom_path(@store, w), method: :delete, class: "wom-delete" %></span>
+      <span><%= link_to "編集", edit_store_wom_path(@store, w), class: "wom-update" %></span>
+      <h1 class="wom-list"><%= w.title %></h1>
+      <div class="wom-list"><%= w.content %></div>
     </div>
   <% end %>
 <% else %>

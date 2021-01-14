@@ -1,0 +1,23 @@
+<%= provide(:title, '購入予定のアイテム一覧') %>
+<%= render 'layouts/link_nabvar' %></br>
+<div class="item-index">
+  <div class="item-save">
+    <p class="btn btn-success"><%= link_to "欲しい古着アイテムを保存する", new_store_item_path %></p>
+  </div>
+  <% if @store.items.present? %>
+    <% @store.items.each do |item| %>
+      <div class="item-box">
+      <div class="function-button">
+        <%= link_to "削除", store_item_path(@store, item), method: :delete %>
+        <%= link_to "編集", edit_store_item_path(@store, item) %>
+      </div>
+        <%= image_tag(item.item_image.to_s) %>
+        <%= item.id %>
+        <p><%= item.name %></p>
+        <%= item.price %>円
+      </div>
+    <% end %>
+  <% else %>
+    <h1>まだこのお店で購入予定のアイテムは保存されていません</h1>
+  <% end %>
+</div>

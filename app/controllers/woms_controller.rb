@@ -1,12 +1,13 @@
 class WomsController < ApplicationController
-  before_action :set_store,    only: [:index, :edit, :new, :create, :update]
-  before_action :set_area,     only: [:index, :edit, :new, :create, :update]
+  before_action :set_store,    only: [:edit, :new, :create, :update]
   before_action :correct_wom,  only: [:destroy]
   before_action :set_wom,      only: [:edit, :update, :destroy]
   before_action :set_favorite
+  before_action :set_item
 
   def index
     @wom = Wom.find_by(params[:id])
+    @store = Store.find(params[:store_id])
   end
 
   def new
@@ -68,10 +69,6 @@ class WomsController < ApplicationController
     @store = Store.find(params[:store_id])
   end
 
-  def set_area
-    @area = Area.find(@store.area_id)
-  end
-
   def correct_wom
     @wom = Wom.find(params[:id])
     redirect_to root_url if @wom.nil?
@@ -85,5 +82,9 @@ class WomsController < ApplicationController
     if user_signed_in?
       @favorite = Favorite.find_by(store_id: params[:store_id], user_id: current_user.id)
     end
+  end
+
+  def set_item
+    @item = Item.find_by(params[:item_id])
   end
 end

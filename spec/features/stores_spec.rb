@@ -70,35 +70,4 @@ RSpec.describe 'Stores', type: :feature do
       end
     end
   end
-
-  # describe "店舗詳細画面のテスト" do
-  #   let!(:area) { create(:area, id: 1, name: '下北沢') }
-  #   let!(:store) { create(:store, id: 1, name: 'ふるぎや', area_id: 1, outline: 'a' * 50, address: 'a' * 15, area: [area]) }
-  #   let!(:store_images) { create_list(:store_image, 4, store_id: 1)}
-
-  #   before do
-  #     visit store_path(store.id)
-  #   end
-
-  #   context "店舗詳細画面に" do
-  #     it "店舗名が表示されていること" do
-  #       expect(page).to have_content store.name
-  #     end
-
-  #     it "店舗住所が表示されていること" do
-  #       expect(page).to have_content store.address
-  #     end
-
-  #     it "店舗概要が表示されていること" do
-  #       expect(page).to have_content store.outline
-  #     end
-  #   end
-
-  #   context "店舗情報リンクを押した場合" do
-  #     it "店舗詳細ページへ遷移すること" do
-  #       click_on '店舗情報'
-  #       expect(current_path).to eq store_path(store.id)
-  #     end
-  #   end
-  # end
 end

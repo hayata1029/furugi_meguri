@@ -5,6 +5,6 @@
     <span><%= f.text_area :title, placeholder: "タイトルを入力してください", class: "wom-title" %></span>
     <p><%= f.text_area :content, placeholder: "クチコミを入力してください", class: "wom-content" %></p>
     <span>訪問した日</span><span><%= f.date_field :visit_date, class: "wom-date" %></span>
-    <%= f.submit "投稿する", class: "wom-submit" %>
+    <%= f.submit "投稿する", class: "btn btn-info save-button" %>
   </div>
 <% end %>

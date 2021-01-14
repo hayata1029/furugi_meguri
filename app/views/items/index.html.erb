@@ -1,0 +1,23 @@
+<%= provide(:title, '購入予定アイテム') %>
+<div class="mypage">
+  <ul class="mypage-list">
+    <li class="list-box"><%= link_to "設定", edit_user_registration_path %></li>
+    <li class="list-box"><%= link_to "保存したお店", user_favorites_path(@user.id) %></li>
+    <li class="list-box"><%= link_to "購入予定アイテム", user_items_path(@user.id) %></li>
+  </ul>
+  <div class="mypage-name">
+    <%= @user.username %>さんのマイページ
+  </div>
+    <% @user.items.each do |item| %>
+      <div class="item-box">
+        <div class="function-button">
+          <%= link_to "削除", store_item_path(item.store_id, item), method: :delete %>
+          <%= link_to "編集", edit_store_item_path(item.store_id, item) %>
+        </div>
+        <%= image_tag item.item_image.to_s %>
+        <p><%= item.name %></p>
+        <p><%= item.price %>円</p>
+        <p><%= link_to item.store.name, store_path(item.store_id) %></p>
+      </div>
+    <% end %>
+</div>
