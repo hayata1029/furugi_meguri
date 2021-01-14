@@ -1,8 +1,8 @@
 class Item < ApplicationRecord
-  mount_uploader :image, ImageUploader
+  mount_uploader :item_image, ItemImageUploader
   belongs_to :user
   belongs_to :store
   validates :name, presence: true
   validates :price, presence: true
-  validates :image, presence: true
+  validates :item_image, presence: true
 end

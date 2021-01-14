@@ -19,6 +19,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = current_user.items.build(items_params)
+    @user = User.find(current_user.id)
     if @item.save
       redirect_to store_list_path(@store.id)
     else
@@ -48,7 +49,7 @@ class ItemsController < ApplicationController
   private
 
   def items_params
-    params.require(:item).permit(:store_id, :name, :price, :image)
+    params.require(:item).permit(:store_id, :name, :price, :item_image)
   end
 
   def set_item
