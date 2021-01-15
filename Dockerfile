@@ -11,6 +11,7 @@ WORKDIR /furugi_meguri
 COPY Gemfile /furugi_meguri/Gemfile
 COPY Gemfile.lock /furugi_meguri/Gemfile.lock
 RUN bundle install
+RUN apt install -y graphviz
 COPY . /furugi_meguri
 
 # Add a script to be executed every time the container starts.

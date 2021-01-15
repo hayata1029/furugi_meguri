@@ -32,6 +32,7 @@ group :development, :test do
   gem 'rubocop-airbnb'
   gem 'rails-controller-testing'
   gem 'faker'
+  gem 'rails-erd'
 end
 
 group :development do
