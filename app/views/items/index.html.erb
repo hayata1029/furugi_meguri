@@ -8,16 +8,20 @@
   <div class="mypage-name">
     <%= @user.username %>さんのマイページ
   </div>
-    <% @user.items.each do |item| %>
-      <div class="item-box">
-        <div class="function-button">
-          <%= link_to "削除", store_item_path(item.store_id, item), method: :delete %>
-          <%= link_to "編集", edit_store_item_path(item.store_id, item) %>
+    <% if @user.items.present? %>
+      <% @user.items.each do |item| %>
+        <div class="item-box">
+          <div class="function-button">
+            <%= link_to "削除", store_item_path(item.store_id, item), method: :delete %>
+            <%= link_to "編集", edit_store_item_path(item.store_id, item) %>
+          </div>
+          <%= image_tag item.item_image.to_s %>
+          <p><%= item.name %></p>
+          <p><%= item.price %>円</p>
+          <p class="d-flex align-items-end"><%= link_to item.store.name, store_path(item.store_id) %></p>
         </div>
-        <%= image_tag item.item_image.to_s %>
-        <p><%= item.name %></p>
-        <p><%= item.price %>円</p>
-        <p><%= link_to item.store.name, store_path(item.store_id) %></p>
-      </div>
+      <% end %>
+    <% else %>
+      <h1>まだ何も保存されていません</h1>
     <% end %>
 </div>
